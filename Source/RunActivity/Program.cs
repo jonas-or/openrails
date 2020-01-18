@@ -54,6 +54,11 @@ namespace Orts
             var options = args.Where(a => a.StartsWith("-") || a.StartsWith("/")).Select(a => a.Substring(1));
             var settings = new UserSettings(options);
 
+            args = new[] { "C:\\Spiele\\MSTS\\ROUTES\\ORClocks\\ACTIVITIES\\ORClocks.act" }; //OR-Clocks
+            args = new[] { "C:\\Spiele\\MSTS\\ROUTES\\ORClocks\\ACTIVITIES\\ORClocks_AT.act" }; //OR-Clocks
+            args = new[] { "C:\\Spiele\\MSTS\\routes\\BStE_Hauptversion\\ACTIVITIES\\BStE01-D13_01_Jm.act" };
+            //args = new[] { "C:\\p-circle\\MSTSAddOns\\Usedom_in_den_1920ern\\ROUTES\\BStE\\ACTIVITIES\\BStE01-D13_01_Jm.act" };
+
             //enables loading of dll for specific architecture(32 or 64bit) from distinct folders, useful when both versions require same name (as for OpenAL32.dll)
             string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Native");
             path = Path.Combine(path, (Environment.Is64BitProcess) ? "X64" : "X86");
